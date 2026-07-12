@@ -1,0 +1,1290 @@
+/* ===========================================================
+   VARIABLES
+=========================================================== */
+
+:root{
+
+    --primary:#ff4d88;
+    --secondary:#ff7eb3;
+    --accent:#ffd6e7;
+
+    --white:#ffffff;
+    --black:#1d1d1d;
+
+    --glass:rgba(255,255,255,.15);
+    --glass-border:rgba(255,255,255,.30);
+
+    --shadow:0 15px 35px rgba(0,0,0,.15);
+
+    --radius:25px;
+
+}
+
+/* ===========================================================
+   RESET
+=========================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:
+    linear-gradient(135deg,#ff9a9e 0%,#fad0c4 50%,#fbc2eb 100%);
+
+    color:var(--white);
+
+    overflow-x:hidden;
+
+    min-height:100vh;
+
+}
+
+/* ===========================================================
+   SCROLL
+=========================================================== */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#ffd9ea;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:var(--primary);
+
+    border-radius:50px;
+
+}
+
+/* ===========================================================
+   FONDO
+=========================================================== */
+
+#stars,
+#petals,
+#hearts{
+
+    position:fixed;
+
+    width:100%;
+    height:100%;
+
+    left:0;
+    top:0;
+
+    pointer-events:none;
+
+    z-index:0;
+
+}
+
+main{
+
+    position:relative;
+
+    z-index:5;
+
+}
+
+/* ===========================================================
+   SECCIONES
+=========================================================== */
+
+section{
+
+    width:100%;
+
+    padding:90px 10%;
+
+}
+
+h1{
+
+    font-size:3.3rem;
+
+    font-weight:700;
+
+    margin-bottom:20px;
+
+}
+
+h2{
+
+    font-size:2.2rem;
+
+    margin-bottom:30px;
+
+}
+
+p{
+
+    line-height:1.8;
+
+    font-size:1.1rem;
+
+}
+
+/* ===========================================================
+   BOTONES
+=========================================================== */
+
+button{
+
+    border:none;
+
+    cursor:pointer;
+
+    padding:16px 35px;
+
+    border-radius:999px;
+
+    background:var(--white);
+
+    color:var(--primary);
+
+    font-size:18px;
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+button:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 10px 25px rgba(0,0,0,.2);
+
+}
+
+/* ===========================================================
+   WELCOME
+=========================================================== */
+
+#welcome{
+
+    position:fixed;
+
+    width:100%;
+    height:100vh;
+
+    left:0;
+    top:0;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:
+    linear-gradient(135deg,#ff7eb3,#ff758c,#ff9a9e);
+
+    z-index:999;
+
+}
+
+.welcome-card{
+
+    width:90%;
+    max-width:700px;
+
+    background:var(--glass);
+
+    backdrop-filter:blur(15px);
+
+    border:1px solid var(--glass-border);
+
+    border-radius:30px;
+
+    padding:60px;
+
+    text-align:center;
+
+    box-shadow:var(--shadow);
+
+}
+
+.welcome-card h1{
+
+    margin-bottom:20px;
+
+}
+
+.welcome-card p{
+
+    margin-bottom:35px;
+
+}
+
+/* ===========================================================
+   HERO
+=========================================================== */
+
+.hero{
+
+    min-height:100vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+}
+
+.hero h1{
+
+    font-size:4rem;
+
+}
+
+.hero p{
+
+    max-width:750px;
+
+    margin-top:15px;
+
+}
+
+/* ===========================================================
+   TARJETAS
+=========================================================== */
+
+.letter-section,
+.gallery,
+.counter,
+.music,
+.quotes,
+.final,
+.surprise{
+
+    margin-top:70px;
+
+    background:var(--glass);
+
+    border:1px solid var(--glass-border);
+
+    backdrop-filter:blur(18px);
+
+    border-radius:30px;
+
+    box-shadow:var(--shadow);
+
+}
+
+/* ===========================================================
+   TEXTO
+=========================================================== */
+
+.letter-section h2,
+.gallery h2,
+.counter h2,
+.music h2,
+.quotes h2,
+.final h1{
+
+    text-align:center;
+
+}
+
+.final{
+
+    text-align:center;
+
+}
+
+.final p{
+
+    margin-top:20px;
+
+}
+
+/* ===========================================================
+   ESPACIADO
+=========================================================== */
+
+.hero,
+.letter-section,
+.gallery,
+.counter,
+.music,
+.quotes,
+.final,
+.surprise{
+
+    padding:70px;
+
+}
+/* ===========================================================
+   CARTA
+=========================================================== */
+
+.envelope{
+
+    width:100%;
+    max-width:650px;
+
+    margin:40px auto;
+
+    position:relative;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+}
+
+.letter{
+
+    width:100%;
+
+    background:white;
+
+    color:#444;
+
+    padding:45px;
+
+    border-radius:20px;
+
+    box-shadow:0 20px 50px rgba(0,0,0,.18);
+
+    transform:scale(.9);
+
+    opacity:.8;
+
+    transition:.45s;
+
+}
+
+.letter.open{
+
+    transform:scale(1);
+
+    opacity:1;
+
+}
+
+.letter p{
+
+    text-align:center;
+
+    line-height:2;
+
+    font-size:1.1rem;
+
+}
+
+/* ===========================================================
+   GALERÍA
+=========================================================== */
+
+.gallery-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:25px;
+
+    margin-top:40px;
+
+}
+
+.gallery-grid img{
+
+    width:100%;
+
+    height:280px;
+
+    object-fit:cover;
+
+    border-radius:20px;
+
+    cursor:pointer;
+
+    transition:.4s;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.18);
+
+}
+
+.gallery-grid img:hover{
+
+    transform:scale(1.06);
+
+    box-shadow:0 18px 45px rgba(0,0,0,.25);
+
+}
+
+/* ===========================================================
+   CONTADOR
+=========================================================== */
+
+.time{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+
+    gap:25px;
+
+    margin-top:40px;
+
+}
+
+.time div{
+
+    background:rgba(255,255,255,.18);
+
+    border-radius:20px;
+
+    padding:30px;
+
+    text-align:center;
+
+    transition:.35s;
+
+}
+
+.time div:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.time span{
+
+    display:block;
+
+    font-size:3rem;
+
+    font-weight:bold;
+
+}
+
+.time small{
+
+    font-size:1rem;
+
+}
+
+/* ===========================================================
+   FRASES
+=========================================================== */
+
+.quotes{
+
+    text-align:center;
+
+}
+
+#quoteText{
+
+    font-size:1.5rem;
+
+    font-weight:500;
+
+    margin-top:20px;
+
+    min-height:80px;
+
+}
+
+/* ===========================================================
+   MÚSICA
+=========================================================== */
+
+.music{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:30px;
+
+    text-align:center;
+
+}
+
+.music h2{
+
+    margin:0;
+
+}
+
+.music button{
+
+    margin:0;
+
+}
+
+.music audio{
+
+    display:none;
+
+}
+
+/* ===========================================================
+   BOTÓN SORPRESA
+=========================================================== */
+
+.surprise{
+
+    text-align:center;
+
+}
+
+#surpriseButton{
+
+    font-size:22px;
+
+    padding:18px 45px;
+
+    transition:.35s;
+
+}
+
+#surpriseButton:hover{
+
+    transform:scale(1.08);
+
+}
+
+/* ===========================================================
+   FINAL
+=========================================================== */
+
+.final{
+
+    margin-bottom:80px;
+
+}
+
+.final h1{
+
+    font-size:3.5rem;
+
+}
+
+.final p{
+
+    font-size:1.2rem;
+
+    opacity:.95;
+
+}
+
+/* ===========================================================
+   GLASSMORPHISM
+=========================================================== */
+
+.hero,
+.letter-section,
+.gallery,
+.counter,
+.music,
+.quotes,
+.surprise,
+.final{
+
+    backdrop-filter:blur(18px);
+
+    -webkit-backdrop-filter:blur(18px);
+
+}
+
+/* ===========================================================
+   IMÁGENES
+=========================================================== */
+
+img{
+
+    user-select:none;
+
+    -webkit-user-drag:none;
+
+}
+
+/* ===========================================================
+   LINKS
+=========================================================== */
+
+a{
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+
+/* ===========================================================
+   SELECCIÓN
+=========================================================== */
+
+::selection{
+
+    background:#ff4d88;
+
+    color:white;
+
+}
+
+/* ===========================================================
+   SOMBRAS
+=========================================================== */
+
+.welcome-card,
+.letter,
+.gallery-grid img,
+.time div{
+
+    box-shadow:0 15px 40px rgba(0,0,0,.18);
+
+}
+
+/* ===========================================================
+   TRANSICIONES
+=========================================================== */
+
+button,
+img,
+.time div,
+.letter{
+
+    transition:.35s ease;
+
+}
+/* ===========================================================
+   EFECTOS PREMIUM
+=========================================================== */
+
+.hero,
+.letter-section,
+.gallery,
+.counter,
+.music,
+.quotes,
+.surprise,
+.final{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+/* Línea brillante superior */
+
+.hero::before,
+.letter-section::before,
+.gallery::before,
+.counter::before,
+.music::before,
+.quotes::before,
+.surprise::before,
+.final::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    top:0;
+
+    width:100%;
+    height:5px;
+
+    background:linear-gradient(
+        90deg,
+        #ffffff,
+        #ffd6e7,
+        #ff4d88,
+        #ffffff
+    );
+
+}
+
+/* Brillo decorativo */
+
+.hero::after,
+.letter-section::after,
+.gallery::after,
+.counter::after,
+.music::after,
+.quotes::after,
+.surprise::after,
+.final::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:250px;
+    height:250px;
+
+    background:rgba(255,255,255,.08);
+
+    border-radius:50%;
+
+    top:-120px;
+    right:-120px;
+
+}
+
+/* ===========================================================
+   TITULOS
+=========================================================== */
+
+h1{
+
+    text-shadow:
+        0 3px 15px rgba(0,0,0,.2);
+
+}
+
+h2{
+
+    position:relative;
+
+    display:inline-block;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+}
+
+h2::after{
+
+    content:"";
+
+    display:block;
+
+    width:70px;
+
+    height:4px;
+
+    background:white;
+
+    margin:12px auto;
+
+    border-radius:999px;
+
+}
+
+/* ===========================================================
+   BOTONES
+=========================================================== */
+
+button{
+
+    background:linear-gradient(
+        135deg,
+        #ffffff,
+        #ffe9f2
+    );
+
+}
+
+button:active{
+
+    transform:scale(.96);
+
+}
+
+/* ===========================================================
+   CARTA
+=========================================================== */
+
+.letter{
+
+    border:3px solid #ffd9ea;
+
+}
+
+.letter p{
+
+    color:#444;
+
+}
+
+/* ===========================================================
+   GALERIA
+=========================================================== */
+
+.gallery-grid img{
+
+    border:4px solid rgba(255,255,255,.45);
+
+}
+
+.gallery-grid img:hover{
+
+    border-color:white;
+
+}
+
+/* ===========================================================
+   CONTADOR
+=========================================================== */
+
+.time div{
+
+    border:1px solid rgba(255,255,255,.3);
+
+}
+
+.time span{
+
+    color:white;
+
+    text-shadow:0 5px 15px rgba(0,0,0,.2);
+
+}
+
+/* ===========================================================
+   FRASES
+=========================================================== */
+
+#quoteText{
+
+    max-width:700px;
+
+    margin:auto;
+
+}
+
+/* ===========================================================
+   FINAL
+=========================================================== */
+
+.final h1{
+
+    letter-spacing:2px;
+
+}
+
+.final p{
+
+    max-width:700px;
+
+    margin:auto;
+
+}
+
+/* ===========================================================
+   ANIMACIONES HOVER
+=========================================================== */
+
+.hero:hover,
+.letter-section:hover,
+.gallery:hover,
+.counter:hover,
+.music:hover,
+.quotes:hover,
+.surprise:hover,
+.final:hover{
+
+    transform:translateY(-5px);
+
+}
+
+/* ===========================================================
+   IMÁGENES RESPONSIVE
+=========================================================== */
+
+img{
+
+    max-width:100%;
+
+}
+
+/* ===========================================================
+   UTILIDADES
+=========================================================== */
+
+.text-center{
+
+    text-align:center;
+
+}
+
+.mt-1{
+
+    margin-top:10px;
+
+}
+
+.mt-2{
+
+    margin-top:20px;
+
+}
+
+.mt-3{
+
+    margin-top:30px;
+
+}
+
+.mt-4{
+
+    margin-top:40px;
+
+}
+
+.mt-5{
+
+    margin-top:50px;
+
+}
+
+.mb-1{
+
+    margin-bottom:10px;
+
+}
+
+.mb-2{
+
+    margin-bottom:20px;
+
+}
+
+.mb-3{
+
+    margin-bottom:30px;
+
+}
+
+.mb-4{
+
+    margin-bottom:40px;
+
+}
+
+.mb-5{
+
+    margin-bottom:50px;
+
+}
+
+/* ===========================================================
+   FOOTER
+=========================================================== */
+
+footer{
+
+    padding:50px;
+
+    text-align:center;
+
+    opacity:.8;
+
+}
+
+/* ===========================================
+   LIGHTBOX
+=========================================== */
+
+#lightbox{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.92);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:.35s;
+
+    z-index:99999;
+
+}
+
+#lightbox.show{
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+
+#lightbox img{
+
+    max-width:90%;
+
+    max-height:85vh;
+
+    border-radius:20px;
+
+    box-shadow:0 20px 60px rgba(0,0,0,.5);
+
+}
+
+#closeLightbox{
+
+    position:absolute;
+
+    top:25px;
+
+    right:35px;
+
+    font-size:45px;
+
+    color:white;
+
+    cursor:pointer;
+
+}
+
+#prevImage,
+#nextImage{
+
+    position:absolute;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    background:rgba(255,255,255,.15);
+
+    border:none;
+
+    color:white;
+
+    width:55px;
+
+    height:55px;
+
+    border-radius:50%;
+
+    cursor:pointer;
+
+    font-size:26px;
+
+}
+
+#prevImage{
+
+    left:25px;
+
+}
+
+#nextImage{
+
+    right:25px;
+
+}
+
+#prevImage:hover,
+#nextImage:hover{
+
+    background:white;
+
+    color:#ff4d88;
+
+}
+/* ===========================================
+   PETALOS
+=========================================== */
+
+#petals{
+
+    position:fixed;
+
+    inset:0;
+
+    overflow:hidden;
+
+    pointer-events:none;
+
+    z-index:2;
+
+}
+
+.petal{
+
+    position:absolute;
+
+    background:linear-gradient(
+
+        135deg,
+
+        #ff7eb3,
+
+        #ffc0cb,
+
+        #ffd9e8
+
+    );
+
+    border-radius:70% 30% 70% 30%;
+
+    box-shadow:
+
+        0 3px 10px rgba(255,100,150,.35);
+
+    will-change:transform;
+
+}
+/* ===========================================
+   ESTRELLAS
+=========================================== */
+
+#stars{
+
+    position:fixed;
+
+    inset:0;
+
+    overflow:hidden;
+
+    pointer-events:none;
+
+    z-index:0;
+
+}
+
+.star{
+
+    position:absolute;
+
+    background:white;
+
+    border-radius:50%;
+
+    box-shadow:
+
+        0 0 10px white;
+
+    animation:
+
+        twinkle infinite ease-in-out;
+
+}
+
+@keyframes twinkle{
+
+    0%{
+
+        opacity:.2;
+
+        transform:scale(.8);
+
+    }
+
+    50%{
+
+        opacity:1;
+
+        transform:scale(1.6);
+
+    }
+
+    100%{
+
+        opacity:.2;
+
+        transform:scale(.8);
+
+    }
+
+}
+
+/* ===========================================
+   ESTRELLA FUGAZ
+=========================================== */
+
+.shooting-star{
+
+    position:absolute;
+
+    width:180px;
+
+    height:2px;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            white,
+            transparent
+        );
+
+    transform:rotate(-35deg);
+
+    animation:
+
+        shooting 1.5s linear forwards;
+
+    opacity:.9;
+
+}
+
+@keyframes shooting{
+
+    from{
+
+        transform:
+
+            translate(0,0)
+
+            rotate(-35deg);
+
+        opacity:1;
+
+    }
+
+    to{
+
+        transform:
+
+            translate(700px,350px)
+
+            rotate(-35deg);
+
+        opacity:0;
+
+    }
+
+}

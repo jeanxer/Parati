@@ -1,0 +1,544 @@
+/* ==========================================================
+   RESPONSIVE.CSS
+   PARTE 1
+========================================================== */
+
+/* ================================
+   Pantallas menores a 1200px
+================================ */
+
+@media (max-width:1200px){
+
+    section{
+
+        padding:70px 8%;
+
+    }
+
+    h1{
+
+        font-size:3rem;
+
+    }
+
+    h2{
+
+        font-size:2rem;
+
+    }
+
+}
+
+/* ================================
+   Tablets
+================================ */
+
+@media (max-width:992px){
+
+    section{
+
+        padding:60px 7%;
+
+    }
+
+    .welcome-card{
+
+        padding:45px;
+
+    }
+
+    .hero{
+
+        min-height:80vh;
+    }
+
+    .hero h1{
+
+        font-size:2.8rem;
+
+    }
+
+    .hero p{
+
+        font-size:1rem;
+
+        width:90%;
+
+        margin:auto;
+
+    }
+
+    .letter-section,
+    .gallery,
+    .counter,
+    .quotes,
+    .music,
+    .surprise,
+    .final{
+
+        padding:50px;
+
+    }
+
+    .gallery-grid{
+
+        grid-template-columns:
+        repeat(2,1fr);
+
+    }
+
+    .gallery-grid img{
+
+        height:240px;
+
+    }
+
+    .time{
+
+        grid-template-columns:
+        repeat(2,1fr);
+
+    }
+
+    .time span{
+
+        font-size:2.5rem;
+
+    }
+
+}
+
+/* ================================
+   Celulares grandes
+================================ */
+
+@media (max-width:768px){
+
+    body{
+
+        overflow-x:hidden;
+
+    }
+
+    section{
+
+        padding:50px 20px;
+
+    }
+
+    h1{
+
+        font-size:2.2rem;
+
+    }
+
+    h2{
+
+        font-size:1.8rem;
+
+    }
+
+    p{
+
+        font-size:1rem;
+
+    }
+
+    .welcome-card{
+
+        width:95%;
+
+        padding:35px 25px;
+
+    }
+
+    .welcome-card h1{
+
+        font-size:2rem;
+
+    }
+
+    .hero{
+
+        padding-top:80px;
+
+    }
+
+    .hero h1{
+
+        font-size:2.5rem;
+
+    }
+
+    .hero p{
+
+        width:100%;
+
+    }
+
+    .letter{
+
+        padding:30px;
+
+    }
+
+    .letter p{
+
+        font-size:1rem;
+
+        line-height:1.8;
+
+    }
+
+    .gallery-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .gallery-grid img{
+
+        height:250px;
+
+    }
+
+    .time{
+
+        grid-template-columns:1fr 1fr;
+
+        gap:15px;
+
+    }
+
+    .time div{
+
+        padding:20px;
+
+    }
+
+    .time span{
+
+        font-size:2rem;
+
+    }
+
+    button{
+
+        width:100%;
+
+        max-width:320px;
+
+    }
+
+}
+
+/* ================================
+   Celulares pequeños
+================================ */
+
+@media (max-width:576px){
+
+    h1{
+
+        font-size:1.9rem;
+
+    }
+
+    h2{
+
+        font-size:1.5rem;
+
+    }
+
+    .hero{
+
+        min-height:auto;
+
+    }
+
+    .hero p{
+
+        margin-top:20px;
+
+    }
+
+    .gallery-grid{
+
+        gap:18px;
+
+    }
+
+    .gallery-grid img{
+
+        height:220px;
+
+    }
+
+}
+/* ==========================================================
+   RESPONSIVE.CSS
+   PARTE 2
+========================================================== */
+
+/* ================================
+   Pantallas menores a 480px
+================================ */
+
+@media (max-width:480px){
+
+    section{
+
+        padding:40px 15px;
+
+    }
+
+    h1{
+
+        font-size:1.8rem;
+
+        line-height:1.3;
+
+    }
+
+    h2{
+
+        font-size:1.4rem;
+
+    }
+
+    p{
+
+        font-size:.95rem;
+
+        line-height:1.7;
+
+    }
+
+    .welcome-card{
+
+        padding:25px 18px;
+
+        border-radius:20px;
+
+    }
+
+    .welcome-card button{
+
+        width:100%;
+
+    }
+
+    .hero{
+
+        min-height:auto;
+
+        padding-top:70px;
+
+    }
+
+    .letter{
+
+        padding:20px;
+
+    }
+
+    .gallery-grid{
+
+        grid-template-columns:1fr;
+
+        gap:15px;
+
+    }
+
+    .gallery-grid img{
+
+        height:200px;
+
+        border-radius:15px;
+
+    }
+
+    .time{
+
+        grid-template-columns:1fr;
+
+        gap:15px;
+
+    }
+
+    .time div{
+
+        padding:18px;
+
+    }
+
+    .time span{
+
+        font-size:1.8rem;
+
+    }
+
+    button{
+
+        font-size:16px;
+
+        padding:14px 25px;
+
+    }
+
+}
+
+/* ================================
+   Pantallas menores a 360px
+================================ */
+
+@media (max-width:360px){
+
+    h1{
+
+        font-size:1.5rem;
+
+    }
+
+    h2{
+
+        font-size:1.2rem;
+
+    }
+
+    p{
+
+        font-size:.9rem;
+
+    }
+
+    .welcome-card{
+
+        padding:20px 15px;
+
+    }
+
+    .letter{
+
+        padding:18px;
+
+    }
+
+    .gallery-grid img{
+
+        height:180px;
+
+    }
+
+    .time span{
+
+        font-size:1.5rem;
+
+    }
+
+    small{
+
+        font-size:.8rem;
+
+    }
+
+}
+
+/* ================================
+   Pantallas muy altas
+================================ */
+
+@media (min-height:900px){
+
+    .hero{
+
+        min-height:100vh;
+
+    }
+
+}
+
+/* ================================
+   Horizontal en móviles
+================================ */
+
+@media (orientation:landscape) and (max-height:600px){
+
+    .hero{
+
+        min-height:auto;
+
+        padding-top:60px;
+
+        padding-bottom:60px;
+
+    }
+
+    #welcome{
+
+        padding:20px;
+
+    }
+
+    .welcome-card{
+
+        max-width:600px;
+
+    }
+
+}
+
+/* ================================
+   Imágenes fluidas
+================================ */
+
+img{
+
+    max-width:100%;
+
+    height:auto;
+
+}
+
+/* ================================
+   Evitar desbordamientos
+================================ */
+
+body{
+
+    overflow-x:hidden;
+
+}
+
+main{
+
+    overflow:hidden;
+
+}
+
+/* ================================
+   Flex y Grid seguros
+================================ */
+
+.gallery-grid,
+.time{
+
+    width:100%;
+
+}
+
+/* ================================
+   Botones
+================================ */
+
+button{
+
+    max-width:100%;
+
+    word-break:break-word;
+
+}
+
+/* ================================
+   FIN PARTE 2
+================================ */
